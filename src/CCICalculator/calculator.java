@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class calculator {
 
 	public static void main(String[] args) {
-		
+
 		String[] one = new String[10];
 		one[0] = "- Myocardial infarction (history, not ECG changes only)";
 		one[1] = "- Congestive heart failure";
@@ -42,132 +42,121 @@ public class calculator {
 		six[1] = "- AIDS (not just HIV positive)";
 
 		int[] ansArray = new int[11];
-		for (int i=0; i < ansArray.length; i++) {
+		for (int i = 0; i < ansArray.length; i++) {
 			ansArray[i] = i;
-		}		
-		
+		}
+
 		System.out.println("-----------One Point Conditions-----------");
 		for (int i = 0; i < one.length; i++) {
 			System.out.println(one[i]);
 		}
 
 		Scanner in = new Scanner(System.in);
-		System.out.println("[Question 1: How many conditions are you satisfied? (0 ~ 10)]");
+		System.out
+				.println("[Question 1: How many conditions are you satisfied? (0 ~ 10)]");
 
-		int flag =0;
+		int flag = 0;
 		String ans = in.nextLine();
-		
-		MARK:
-		while (flag == 0)
-		{
-			for (int i = 0; i<one.length+1; i++) {
-				
-				if((Integer.toString(ansArray[i])).equals(ans)){
+
+		MARK: while (flag == 0) {
+			for (int i = 0; i < one.length + 1; i++) {
+
+				if ((Integer.toString(ansArray[i])).equals(ans)) {
 					flag = 1;
 					break MARK;
 				}
 			}
-			
+
 			System.out.println("Please answer with number from 0 to 10.");
-			ans = in.nextLine();				
+			ans = in.nextLine();
 		}
-	
+
 		int oneNumber = Integer.parseInt(ans);
-		
-	
+
 		System.out.println();
 		System.out.println("-----------Two Points Conditions-----------");
 		for (int i = 0; i < two.length; i++) {
 			System.out.println(two[i]);
 		}
-		
-		System.out.println("[Question 2: How many conditions are you satisfied? (0 ~ 6)]");
 
-		flag =0; //reset flag;
+		System.out
+				.println("[Question 2: How many conditions are you satisfied? (0 ~ 6)]");
+
+		flag = 0; // reset flag;
 		ans = in.nextLine();
-		
-		MARK:
-		while (flag == 0)
-		{
-			for (int i = 0; i<two.length+1; i++) {
-				
-				if((Integer.toString(ansArray[i])).equals(ans)){
+
+		MARK: while (flag == 0) {
+			for (int i = 0; i < two.length + 1; i++) {
+
+				if ((Integer.toString(ansArray[i])).equals(ans)) {
 					flag = 1;
 					break MARK;
 				}
 			}
-			
+
 			System.out.println("Please answer with number 0 ~ 6.");
-			ans = in.nextLine();				
+			ans = in.nextLine();
 		}
 
-		
 		int twoNumber = Integer.parseInt(ans);
-				
+
 		System.out.println();
 		System.out.println("-----------Three Points Conditions-----------");
 		System.out.println(three);
-		
-		System.out.println("[Question 3: How many condition are you satisfied?  (0 ~ 1).]");
 
-		flag =0; 
+		System.out
+				.println("[Question 3: How many condition are you satisfied?  (0 ~ 1).]");
+
+		flag = 0;
 		ans = in.nextLine();
-		
-		MARK:
-		while (flag == 0)
-		{
-			for (int i = 0; i<2; i++) {
-				
-				if((Integer.toString(ansArray[i])).equals(ans)){
+
+		MARK: while (flag == 0) {
+			for (int i = 0; i < 2; i++) {
+
+				if ((Integer.toString(ansArray[i])).equals(ans)) {
 					flag = 1;
 					break MARK;
 				}
 			}
-			
+
 			System.out.println("Please answer with number 0 ~ 1.");
-			ans = in.nextLine();				
+			ans = in.nextLine();
 		}
 
-		
 		int threeNumber = Integer.parseInt(ans);
-		
+
 		System.out.println();
 		System.out.println("-----------Six Points Conditions-----------");
 		for (int i = 0; i < six.length; i++) {
 			System.out.println(six[i]);
 		}
-		
-		System.out.println("Question 4: How many conditions are you satisfied? (0 ~ 2)");
 
-		flag =0;
+		System.out
+				.println("Question 4: How many conditions are you satisfied? (0 ~ 2)");
+
+		flag = 0;
 		ans = in.nextLine();
-		
-		MARK:
-		while (flag == 0)
-		{
-			for (int i = 0; i<six.length +1 ; i++) {
-				
-				if((Integer.toString(ansArray[i])).equals(ans)){
+
+		MARK: while (flag == 0) {
+			for (int i = 0; i < six.length + 1; i++) {
+
+				if ((Integer.toString(ansArray[i])).equals(ans)) {
 					flag = 1;
 					break MARK;
 				}
 			}
-			
+
 			System.out.println("Please answer with number 0 ~ 2.");
-			ans = in.nextLine();				
+			ans = in.nextLine();
 		}
 
-		
 		int sixNumber = Integer.parseInt(ans);
 
-		
-
 		in.close();
-		
-		int cci = 1*oneNumber + 2*twoNumber + 3*threeNumber + 6*sixNumber;
+
+		int cci = 1 * oneNumber + 2 * twoNumber + 3 * threeNumber + 6
+				* sixNumber;
 		System.out.println("Charlson Comorbidity Index (CCI) Score: " + cci);
-			
-			
 
 	}
 
