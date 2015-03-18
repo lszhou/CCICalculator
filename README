@@ -1,0 +1,99 @@
+                Charlson Comorbidity Scoring Program
+
+--------------------------
+Introduction and Statement
+--------------------------
+Charlson Comorbidity Index (CCI) is an index for estimating prognosis for dialysis
+Patients. This program is a tool used to calculate the amount of disease burden a 
+subject is carrying at any point in time. It is actually a java implementation of 
+the functionalities shown by the following web page: http://touchcalc.com/calculators/cci_js
+
+The functionalities includes 
+
+1) Collecting the user information (Age, Serum Albumin Value) and their answers 
+to different questions interactively; 
+
+2) Error and exception checking; 
+
+3) Display the the estimated prognosis (CCI Survival, etc) via console.
+
+-----------------------------
+Command Line Arguments and UI
+-----------------------------
+
+Example: javac calculator
+         java calculator
+         
+The following is the interactive UI.
+
+Example:
+
+==========================================================
+=========--Charlson Comorbidity Scoring System--==========
+==========================================================
+
+Welcome to Charlson Comorbidity Index (CCI) system, 
+please follow the instructions and answer the following 
+questions step by step.
+
+[Question 1: How many following conditions do you have? (0 ~ 10)]
+
+* Myocardial infarction (history, not ECG changes only)
+* Congestive heart failure
+* Peripheral disease (includes aortic aneurysm >= 6 cm
+* Cerebrovascular disease: CVA with mild or no residua or TIA
+* Dementia
+* Chronic pulmonary disease
+* Connective tissue disease
+* Peptic ulcer disease
+* Mild liver disease (without portal hypertension, inlcudes chronic hepatitis)
+* Diabetes without end-organ damage (excludes diet-controlled alone)
+
+Please anserwer below and press 'Enter' to continue:
+3
+[Question 2: How many following conditions do you have? (0 ~ 6)]
+
+* Hemiplegia
+* Moderate or severe renal disease
+* Diabetes with end-organ damage (retinopathy, neuropathy,nephropathy, or brittle diabetes)
+* Tumor without metastasis (exclude if > 5 y from diagnosis)
+* Leukemia(acute or chronic)
+* Lymphoma
+
+Please anserwer below and press 'Enter' to continue:
+0
+[Question 3: How many following conditions do you have? (0 ~ 1).]
+
+* Moderate or severe liver disease
+
+Please anserwer below and press 'Enter' to continue:
+1
+Question 4: How many following conditions do you have? (0 ~ 2)
+
+* Metastatic solid tumor
+* AIDS (not just HIV positive)
+
+Please anserwer below and press 'Enter' to continue:
+0
+Question 5: How old are you?
+
+Please anserwer below and press 'Enter' to continue:
+52
+Question 6: What is your Serum Albumin level (g/dL)?
+
+Please anserwer below and press 'Enter' to continue:
+3.5
++--------------------------------RESULT----------------------------+
+|Charlson Comorbidity Index (CCI) Score: 6
+|Age factored: 7
+|------------------------------------------------------------------
+|Survival based on CCI: ONE YEAR: 79 ¡À 9.6, TWO YEARS: 55 ¡À 11.4
+|Survival based on Serum Albumin: ONE YEAR: 86 ¡À 5.9, TWO YEARS: 76 ¡À 7.1
+|Survival based on Serum Alb and CCI: ONE YEAR: 84 ¡À 4, TWO YEARS: 67 ¡À 5
++------------------------------------------------------------------------+
+
+Calculation is Done!
+
+
+
+ 
