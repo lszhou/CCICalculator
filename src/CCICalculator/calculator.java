@@ -44,25 +44,25 @@ public class calculator {
 			six[1] = "* AIDS (not just HIV positive)";
 			
 			String[] Survival_CCI = new String[4];
-			Survival_CCI[0] = "ONE YEAR: 98 ¡À 3.1, TWO YEARS: 95 ¡À 5.3"; //Low
-			Survival_CCI[1] = "ONE YEAR: 89 ¡À 8.8, TWO YEARS: 80 ¡À 10.4"; //media
-			Survival_CCI[2] = "ONE YEAR: 79 ¡À 9.6, TWO YEARS: 55 ¡À 11.4";//High
-			Survival_CCI[3] = "ONE YEAR: 64 ¡À 10.8, TWO YEARS: 35 ¡À 10.8"; //Very High
+			Survival_CCI[0] = "ONE YEAR: 98 \u00B1 3.1, TWO YEARS: 95 \u00B1 5.3"; //Low
+			Survival_CCI[1] = "ONE YEAR: 89 \u00B1 8.8, TWO YEARS: 80 \u00B1 10.4"; //media
+			Survival_CCI[2] = "ONE YEAR: 79 \u00B1 9.6, TWO YEARS: 55 \u00B1 11.4";//High
+			Survival_CCI[3] = "ONE YEAR: 64 \u00B1 10.8, TWO YEARS: 35 \u00B1 10.8"; //Very High
 			
 			String[] Survival_SA = new String[2];
-			Survival_SA[0] = "ONE YEAR: 50 ¡À 14.7, TWO YEARS: 17 ¡À 11.4"; //Albumin(g/dL) < 3.5;
-			Survival_SA[1] = "ONE YEAR: 86 ¡À 5.9, TWO YEARS: 76 ¡À 7.1"; // Albumin(g/dL) >= 3.5;
+			Survival_SA[0] = "ONE YEAR: 50 \u00B1 14.7, TWO YEARS: 17 \u00B1 11.4"; //Albumin(g/dL) < 3.5;
+			Survival_SA[1] = "ONE YEAR: 86 \u00B1 5.9, TWO YEARS: 76 \u00B1 7.1"; // Albumin(g/dL) >= 3.5;
 			
 			String[] Survival_SA_CCI = new String[8];
-			Survival_SA_CCI[0] = "ONE YEAR: 91 ¡À 0, TWO YEARS: 87 ¡À 11"; //Low, Albumin(g/dL) < 3.5
-			Survival_SA_CCI[1] = "ONE YEAR: 73 ¡À 9, TWO YEARS: 61 ¡À 12"; //Media, Albumin(g/dL) < 3.5
-			Survival_SA_CCI[2] = "ONE YEAR: 69 ¡À 7, TWO YEARS: 49 ¡À 8"; //High, Albumin(g/dL) < 3.5
-			Survival_SA_CCI[3] = "ONE YEAR: 52 ¡À 9, TWO YEARS: 30 ¡À 10"; //Very High, Albumin(g/dL) < 3.5
+			Survival_SA_CCI[0] = "ONE YEAR: 91 \u00B1 0, TWO YEARS: 87 \u00B1 11"; //Low, Albumin(g/dL) < 3.5
+			Survival_SA_CCI[1] = "ONE YEAR: 73 \u00B1 9, TWO YEARS: 61 \u00B1 12"; //Media, Albumin(g/dL) < 3.5
+			Survival_SA_CCI[2] = "ONE YEAR: 69 \u00B1 7, TWO YEARS: 49 \u00B1 8"; //High, Albumin(g/dL) < 3.5
+			Survival_SA_CCI[3] = "ONE YEAR: 52 \u00B1 9, TWO YEARS: 30 \u00B1 10"; //Very High, Albumin(g/dL) < 3.5
 			
-			Survival_SA_CCI[4] = "ONE YEAR: 93 ¡À 3, TWO YEARS: 89 ¡À 5"; //Low, Albumin(g/dL) >= 3.5
-			Survival_SA_CCI[5] = "ONE YEAR: 89 ¡À 4, TWO YEARS: 75 ¡À 6"; //Media, Albumin(g/dL) >= 3.5
-			Survival_SA_CCI[6] = "ONE YEAR: 84 ¡À 4, TWO YEARS: 67 ¡À 5"; //High, Albumin(g/dL) >= 3.5
-			Survival_SA_CCI[7] = "ONE YEAR: 75 ¡À 5, TWO YEARS: 52 ¡À 6"; //Very High, Albumin(g/dL) >= 3.5
+			Survival_SA_CCI[4] = "ONE YEAR: 93 \u00B1 3, TWO YEARS: 89 \u00B1 5"; //Low, Albumin(g/dL) >= 3.5
+			Survival_SA_CCI[5] = "ONE YEAR: 89 \u00B1 4, TWO YEARS: 75 \u00B1 6"; //Media, Albumin(g/dL) >= 3.5
+			Survival_SA_CCI[6] = "ONE YEAR: 84 \u00B1 4, TWO YEARS: 67 \u00B1 5"; //High, Albumin(g/dL) >= 3.5
+			Survival_SA_CCI[7] = "ONE YEAR: 75 \u00B1 5, TWO YEARS: 52 \u00B1 6"; //Very High, Albumin(g/dL) >= 3.5
 	
 			
 
