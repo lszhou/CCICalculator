@@ -54,7 +54,7 @@ public class calculator {
 			Survival_SA[1] = "ONE YEAR: 86 ¡À 5.9, TWO YEARS: 76 ¡À 7.1"; // Albumin(g/dL) >= 3.5;
 			
 			String[] Survival_SA_CCI = new String[8];
-			Survival_SA_CCI[0] = "ONE YEAR: 91 ¡À 10, TWO YEARS: 87 ¡À 11"; //Low, Albumin(g/dL) < 3.5
+			Survival_SA_CCI[0] = "ONE YEAR: 91 ¡À 0, TWO YEARS: 87 ¡À 11"; //Low, Albumin(g/dL) < 3.5
 			Survival_SA_CCI[1] = "ONE YEAR: 73 ¡À 9, TWO YEARS: 61 ¡À 12"; //Media, Albumin(g/dL) < 3.5
 			Survival_SA_CCI[2] = "ONE YEAR: 69 ¡À 7, TWO YEARS: 49 ¡À 8"; //High, Albumin(g/dL) < 3.5
 			Survival_SA_CCI[3] = "ONE YEAR: 52 ¡À 9, TWO YEARS: 30 ¡À 10"; //Very High, Albumin(g/dL) < 3.5
