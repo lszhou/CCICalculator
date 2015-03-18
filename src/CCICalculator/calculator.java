@@ -1,12 +1,3 @@
-/**
- * the following the functionalities should be added:
- * - command line error checking;
- * - manually terminate the program, namely multiple use;
- * - SURVIVAL probability should be provided; 
- * - Comments should be completed;
- * 
- */
-
 package CCICalculator;
 
 import java.util.Scanner;
@@ -25,8 +16,6 @@ public class calculator {
 	}
 
 	public static void main(String[] args) {
-
-		MARK: while (true) {
 
 			String[] one = new String[10];
 			one[0] = "* Myocardial infarction (history, not ECG changes only)";
@@ -53,6 +42,29 @@ public class calculator {
 			String[] six = new String[2];
 			six[0] = "* Metastatic solid tumor";
 			six[1] = "* AIDS (not just HIV positive)";
+			
+			String[] Survival_CCI = new String[4];
+			Survival_CCI[0] = "ONE YEAR: 98 ¡À 3.1, TWO YEARS: 95 ¡À 5.3"; //Low
+			Survival_CCI[1] = "ONE YEAR: 89 ¡À 8.8, TWO YEARS: 80 ¡À 10.4"; //media
+			Survival_CCI[2] = "ONE YEAR: 79 ¡À 9.6, TWO YEARS: 55 ¡À 11.4";//High
+			Survival_CCI[3] = "ONE YEAR: 64 ¡À 10.8, TWO YEARS: 35 ¡À 10.8"; //Very High
+			
+			String[] Survival_SA = new String[2];
+			Survival_SA[0] = "ONE YEAR: 50 ¡À 14.7, TWO YEARS: 17 ¡À 11.4"; //Albumin(g/dL) < 3.5;
+			Survival_SA[1] = "ONE YEAR: 86 ¡À 5.9, TWO YEARS: 76 ¡À 7.1"; // Albumin(g/dL) >= 3.5;
+			
+			String[] Survival_SA_CCI = new String[8];
+			Survival_SA_CCI[0] = "ONE YEAR: 91 ¡À 10, TWO YEARS: 87 ¡À 11"; //Low, Albumin(g/dL) < 3.5
+			Survival_SA_CCI[1] = "ONE YEAR: 73 ¡À 9, TWO YEARS: 61 ¡À 12"; //Media, Albumin(g/dL) < 3.5
+			Survival_SA_CCI[2] = "ONE YEAR: 69 ¡À 7, TWO YEARS: 49 ¡À 8"; //High, Albumin(g/dL) < 3.5
+			Survival_SA_CCI[3] = "ONE YEAR: 52 ¡À 9, TWO YEARS: 30 ¡À 10"; //Very High, Albumin(g/dL) < 3.5
+			
+			Survival_SA_CCI[4] = "ONE YEAR: 93 ¡À 3, TWO YEARS: 89 ¡À 5"; //Low, Albumin(g/dL) >= 3.5
+			Survival_SA_CCI[5] = "ONE YEAR: 89 ¡À 4, TWO YEARS: 75 ¡À 6"; //Media, Albumin(g/dL) >= 3.5
+			Survival_SA_CCI[6] = "ONE YEAR: 84 ¡À 4, TWO YEARS: 67 ¡À 5"; //High, Albumin(g/dL) >= 3.5
+			Survival_SA_CCI[7] = "ONE YEAR: 75 ¡À 5, TWO YEARS: 52 ¡À 6"; //Very High, Albumin(g/dL) >= 3.5
+	
+			
 
 			System.out.println("==========================================================");
 			System.out.println("=========--Charlson Comorbidity Scoring System--==========");
@@ -101,7 +113,6 @@ public class calculator {
 
 			while(true) {    
 			    try {
-			        //in = new Scanner(System.in);
 			        ans = in.nextLine();
 			        if (isInteger(ans) && (Integer.parseInt(ans)) >= 0
 							&& (Integer.parseInt(ans)) <= 6){
@@ -123,7 +134,6 @@ public class calculator {
 
 			while(true) {    
 			    try {
-			        //in = new Scanner(System.in);
 			        ans = in.nextLine();
 			        if (isInteger(ans) && (Integer.parseInt(ans)) >= 0
 							&& (Integer.parseInt(ans)) <= 1){
@@ -150,10 +160,9 @@ public class calculator {
 
 			while(true) {    
 			    try {
-			        //in = new Scanner(System.in);
 			        ans = in.nextLine();
 			        if (isInteger(ans) && (Integer.parseInt(ans)) >= 0
-							&& (Integer.parseInt(ans)) <= 1){
+							&& (Integer.parseInt(ans)) <= 2){
 				        break;
 			        }
 			        System.out.println("Please answer with numbers 0 ~ 2.");
@@ -168,7 +177,6 @@ public class calculator {
 			System.out.println("Question 5: How old are you?");
 			while(true) {    
 			    try {
-			        //in = new Scanner(System.in);
 			        ans = in.nextLine();
 			        if (isInteger(ans) && (Integer.parseInt(ans)) > 0){
 				        break;
@@ -187,38 +195,77 @@ public class calculator {
 			} else {
 				age = (age - 40) / 10;
 			}
-
+			
+			
+			System.out.println("Question 6: What is your Serum Albumin level (g/dL)?");
+			while(true) {    
+			    try {
+			        ans = in.nextLine();
+			        if (Double.parseDouble(ans) > 0){
+				        break;
+			        }
+			        System.out.println("Please answer with a valid value.");
+			    }
+			    catch(Exception ex ) {
+			        System.out.println("Please answer with a valid value.");
+			    }
+			}
+			
+			double SA = Double.parseDouble(ans);
+			
 			int cci = 1 * oneNumber + 2 * twoNumber + 3 * threeNumber + 6* sixNumber;
 
 			int Age_factored_cci = 1 * age + 1 * oneNumber + 2 * twoNumber + 3* threeNumber + 6 * sixNumber;
 
-			System.out.println("Charlson Comorbidity Index (CCI) Score: " + cci);
-			System.out.println("Age factored: " + Age_factored_cci);
+			System.out.println("+-----------------------------RESULT-------------------------+");
+			System.out.println("|Charlson Comorbidity Index (CCI) Score: " + cci);
+			System.out.println("|Age factored: " + Age_factored_cci);
+			System.out.println("|--------------------------------------------------");
+			System.out.printf("|Survival based on CCI: ");
+			if(Age_factored_cci >= 2 && Age_factored_cci <= 3 ){
+				System.out.println(Survival_CCI[0]);
+			}else if (Age_factored_cci >= 4 && Age_factored_cci <= 5 ) {
+				System.out.println(Survival_CCI[1]);
+			}else if (Age_factored_cci >= 6 && Age_factored_cci <= 7 ) {
+				System.out.println(Survival_CCI[2]);
+			}else if (Age_factored_cci >= 8) {
+				System.out.println(Survival_CCI[3]);
+			}
+			
+			System.out.printf("|Survival based on Serum Albumin: ");
+			if (SA < 3.5){
+				System.out.println(Survival_SA[0]);
+			}else{
+				System.out.println(Survival_SA[1]);
+			}
+			
+			System.out.printf("|Survival based on Serum Alb and CCI: ");
+		    if (SA < 3.5) {
+		    	if (Age_factored_cci >= 2 && Age_factored_cci <= 3) {
+		    		System.out.println(Survival_SA_CCI[0]);
+		    	} else if (Age_factored_cci >= 4 && Age_factored_cci <= 5) {
+				System.out.println(Survival_SA_CCI[1]);
+		    	} else if (Age_factored_cci >= 6 && Age_factored_cci <= 7) {
+				System.out.println(Survival_SA_CCI[2]);
+		    	} else if (Age_factored_cci >= 8) {
+		    		System.out.println(Survival_SA_CCI[3]);
+		    	}
+		    }else{
+		    	if (Age_factored_cci >= 2 && Age_factored_cci <= 3) {
+		    		System.out.println(Survival_SA_CCI[4]);
+		    	} else if (Age_factored_cci >= 4 && Age_factored_cci <= 5) {
+				System.out.println(Survival_SA_CCI[5]);
+		    	} else if (Age_factored_cci >= 6 && Age_factored_cci <= 7) {
+				System.out.println(Survival_SA_CCI[6]);
+		    	} else if (Age_factored_cci >= 8) {
+		    		System.out.println(Survival_SA_CCI[7]);
+		    	}
+		    }
+		    
+		    System.out.println("+---------------------------------------------------------------+");
+			System.out.println();
+			System.out.println("Calculation is Done!");
 			in.close();
 
-			System.out.println();
-			System.out.println("[Restart a new calculation? ('Y' to restart / 'N' to terminate)]");
-
-			String cal = null;
-			while(true){
-				try {
-					cal = in.nextLine();
-					if (cal.equals("N")) {
-						System.out.println("Calculator is Terminated!");
-						break MARK;
-					}
-					else if(cal.equals("Y")) {
-						continue MARK;
-					}
-			    }
-			    catch(Exception ex ) {
-			        System.out.println("Please press 'Y' or 'N'.");
-				}
-
-			}
-
-		}
-
 	}
-
 }
