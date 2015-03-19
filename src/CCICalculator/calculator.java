@@ -7,7 +7,8 @@
  * LONGSHENG ZHOU if you need additional information or have any questions.
  */
 
-package CCICalculator;
+//The following line should be added if you use eclipse.
+//package CCICalculator;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 

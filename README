@@ -21,12 +21,21 @@ to different questions interactively;
 Command Line Arguments and UI
 -----------------------------
 
-Example: javac calculator
-         java calculator
-         
-The following is the interactive UI.
+Usage
+(1) Linux/Windows Command prompt: 
+$ javac calculator.java
+$ java calculator
 
-Example:
+The screenshots are attached; 
+         
+(2) Eclipse:
+Include package first, i.e. add the following line to calculator.java:
+
+package CCICalculator;
+
+then import the project to eclipse and run it directly. 
+
+
 
 ==========================================================
 =========--Charlson Comorbidity Scoring System--==========
